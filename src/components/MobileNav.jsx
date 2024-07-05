@@ -2,7 +2,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { CiMenuFries } from 'react-icons/ci';
 import { FaUserCircle } from 'react-icons/fa';
 import { Link, useLocation } from "react-router-dom";
-import Button from './Button';
+import { Button } from './ui/button';
 
 const MobileNav = () => {
     const links = [

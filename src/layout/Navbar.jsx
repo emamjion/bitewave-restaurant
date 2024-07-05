@@ -1,9 +1,8 @@
-import React from 'react';
 import { FaUserCircle } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 // components
-import Button from '../components/Button';
+import { Button } from "@/components/ui/button";
 import DesktopNav from '../components/DesktopNav';
 import MobileNav from '../components/MobileNav';
 

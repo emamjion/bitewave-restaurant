@@ -4,7 +4,7 @@ import { MdFastfood } from "react-icons/md";
 import AboutImg from '../../assets/images/about.png';
 const AboutUs = () => {
     return (
-        <div className='py-8 xl:py-[105px]'>
+        <section className='py-8 xl:py-[105px] container mx-auto'>
             <div className="flex flex-col lg:flex-row gap-[30px]">
                 {/* image container */}
                 <div className="w-full lg:w-[50%] flex order-1 lg:order-none">
@@ -51,7 +51,7 @@ const AboutUs = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

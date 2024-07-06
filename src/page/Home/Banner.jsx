@@ -30,11 +30,11 @@ const Banner = () => {
     // }
     
     return (
-        <div className="w-full banner-bg h-[760px]">
+        <section className="w-full banner-bg h-[760px]">
             <Swiper 
                 spaceBetween={30} 
                 slidesPerView={1} 
-                className='xl:h-full mb-12'
+                className='xl:h-full mb-12 container mx-auto'
                 // onSlideChange={handleSlideChange}
             >
                 {
@@ -66,7 +66,7 @@ const Banner = () => {
                     btnStyles='bg-accent hover:bg-accent-hover text-white text-[16px] w-[30px] h-[30px] rounded-full flex items-center justify-center transition-all'
                 />
             </Swiper>
-        </div>
+        </section>
     );
 };
 

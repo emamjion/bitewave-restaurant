@@ -25,12 +25,12 @@ const FeatureSection = () => {
     ]
     
     return (
-        <div className='py-8 xl:py-12'>
+        <section className='py-8 xl:py-12'>
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-[30px]">
                 {
                     items.map((item, index) => {
                         return (
-                            <div key={index} className="border border-[#ddd] p-2.5 text-center rounded">
+                            <div key={index} className="border border-[#ddd] p-2.5 text-center rounded hover:border-none hover:shadow-xl duration-500">
                                 <div className="w-[85px] h-[85px] mx-auto">
                                     <img src={item.icon} alt="" className="max-w-full" />
                                 </div>
@@ -46,7 +46,7 @@ const FeatureSection = () => {
                     })
                 }
             </div>
-        </div>
+        </section>
     );
 };
 

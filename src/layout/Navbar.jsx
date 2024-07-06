@@ -8,7 +8,7 @@ import MobileNav from '../components/MobileNav';
 
 const Navbar = () => {
     return (
-        <header className='py-8 xl:py-12'>
+        <header className='pt-8 xl:pt-12 '>
             <div className='container mx-auto flex justify-between items-center'>
                 {/* Logo */}
                 <Link to='/'>

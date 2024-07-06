@@ -1,0 +1,6 @@
+Project TODO
+
+1. Banner -> text er bam pasher space problem
+2. Banner -> mobile device a carousel arrow dekha jayna.
+3. Features -> Card er button gulo bottom a thakbe. width jay hok na keno.
+4. Banner and other section full width kora

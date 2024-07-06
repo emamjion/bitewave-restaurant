@@ -1,5 +1,6 @@
 import Banner from "./Banner";
 import FeatureSection from "./FeatureSection";
+import SubscriptionSection from "./SubscriptionSection";
 
 const Home = () => {
     return (
@@ -7,6 +8,9 @@ const Home = () => {
             <Banner/>
             {/* Features section */}
             <FeatureSection/>
+
+            {/* Subscription section */}
+            <SubscriptionSection/>
         </div>
     );
 };

@@ -25,7 +25,7 @@ const FeatureSection = () => {
     ]
     
     return (
-        <section className='py-8 xl:py-12'>
+        <section className='py-8 xl:py-[105px]'>
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-[30px]">
                 {
                     items.map((item, index) => {

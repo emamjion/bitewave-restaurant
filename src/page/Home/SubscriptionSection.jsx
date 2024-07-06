@@ -3,7 +3,7 @@ import { IoIosSend } from "react-icons/io";
 import './../../styles/Subscription.css';
 const SubscriptionSection = () => {
     return (
-        <div className='py-8 xl:py-12 subs-bg'>
+        <div className='py-8 xl:py-[105px] subs-bg'>
             
           <div className='flex items-center flex-col lg:flex-row gap-6 justify-center'>
                 {/* text */}

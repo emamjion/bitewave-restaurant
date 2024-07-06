@@ -1,3 +1,4 @@
+import AboutUs from "./AboutUs";
 import Banner from "./Banner";
 import FeatureSection from "./FeatureSection";
 import SubscriptionSection from "./SubscriptionSection";
@@ -11,6 +12,9 @@ const Home = () => {
 
             {/* Subscription section */}
             <SubscriptionSection/>
+
+            {/* About us section */}
+            <AboutUs/>
         </div>
     );
 };

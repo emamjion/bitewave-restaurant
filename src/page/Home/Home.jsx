@@ -27,6 +27,8 @@ const Home = () => {
 
             {/* Happy Customers section */}
             <HappyCustomers/>
+
+            {/* TODO: Blog section will be add */}
         </div>
     );
 };

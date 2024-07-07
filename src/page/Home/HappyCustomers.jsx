@@ -73,10 +73,16 @@ const HappyCustomers = () => {
                                 })
                             }
                             {/* swiper buttons */}
-                            <div>
+                            {/* <div>
                                 <WorkSliderBtns 
                                     containerStyles='flex gap-2 absolute left-16 bottom-[calc(50%_22px)] xl:bottom-5 z-40 w-full justify-left'
                                     btnStyles='bg-accent hover:bg-accent-hover text-white text-[16px] w-[30px] h-[30px] rounded-full flex items-center justify-center transition-all'
+                                />
+                            </div> */}
+                            <div>
+                                <WorkSliderBtns 
+                                    containerStyles='flex gap-2 absolute right-0 lg:left-16 bottom-[48%] xl:bottom-5 z-20 w-full justify-between xl:w-max xl:justify-none'
+                                    btnStyles='text-white text-[18px] w-[36px] h-[36px] bg-accent hover:bg-[#292929] duration-500 flex items-center justify-center rounded-full'
                                 />
                             </div>
                         </Swiper>

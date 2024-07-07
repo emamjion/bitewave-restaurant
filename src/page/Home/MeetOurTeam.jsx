@@ -19,7 +19,7 @@ const MeetOurTeam = () => {
             name: 'Khalid Saifullah',
             position: 'Food Inspector',
             description: 'Experienced leader with a passion for innovation and excellence in business management. Driving our team towards success.'
-        },
+        }
     ]
     
     return (

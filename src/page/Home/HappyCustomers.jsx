@@ -1,14 +1,15 @@
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
+import { Rating } from '@smastrom/react-rating';
+import '@smastrom/react-rating/style.css';
 import { useEffect, useState } from 'react';
 import { FaQuoteLeft } from "react-icons/fa";
+import '../../styles/HappyCustomers.css';
+
 import 'swiper/css';
-import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const HappyCustomers = () => {
     const [customers, setCustomers] = useState([]);
+    console.log(customers);
     useEffect(() => {
         fetch('./customers.json').then(res => res.json()).then(data => setCustomers(data))
     }, [])
@@ -18,33 +19,61 @@ const HappyCustomers = () => {
                 <h4 className='text-[20px] font-semibold text-accent mb-1.5'>Happy Customers</h4>
                 <h1 className='text-[28px] lg:text-[36px] font-semibold text-[#292929]'>Our Guestbook</h1>
             </div>
-            <div>
-                <Swiper
-                    spaceBetween={30}
-                    pagination={{
-                    clickable: true,
-                    }}
-                    modules={[Pagination]}
-                    className="mySwiper"
-                >
-                    {
-                        customers.map((customer) => <SwiperSlide
-                            key={customer.id}
-                        >
-                            {/* Text */}
-                            <div>
-                                <span>
-                                    <FaQuoteLeft />
-                                </span>
+            <div className='mt-5 max-w-5xl mx-auto'>
+                <div>
+                    {/* <div className='flex flex-col xl:flex-row xl:gap-[30px]'>
+                        <div className='w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none'>
+                            text part
+                        </div>
+                        <div className='w-full xl:w-[50%]'>slide</div>
+                    </div> */}
 
-                            </div>
-                            {/* image */}
-                            <div>
+                    <div>
+                        <Swiper className='border border-slate-200'>
+                            {
+                                customers.map((customer) => {
+                                    return (
+                                        <SwiperSlide
+                                            key={customer.id}
+                                        >
+                                            <div className='flex flex-col xl:flex-row gap-[30px] xl:justify-between'>
+                                                <div className=' w-full xl:w-[60%] h-[460px] px-[50px] py-[50px]'>
+                                                    <div className=''>
+                                                        <div>
+                                                            <span> <FaQuoteLeft className='text-5xl text-accent' /> </span>
+                                                        </div>
+                                                        <div className='mt-6'>
+                                                            <p className='text-[#666666] py-5 xl:max-w-[450px]'>{customer.comment}</p>
+                                                            <div className='mt-1.5'>
+                                                                <div>
+                                                                    <span className='text-xl font-semibold'>{customer.name}</span> <span className='text-xs'> - {customer.type}</span> 
+                                                                    <p className='text-sm font-medium text-accent mt-0.5'>{customer.date}</p>  
+                                                                </div>
+                                                                <div className='mt-5'>
+                                                                    <Rating
+                                                                        style={{ maxWidth: 180 }}
+                                                                        value={customer.rating}
+                                                                        readOnly
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
-                            </div>
-                        </SwiperSlide>)
-                    }
-                </Swiper>
+                                                <div className='w-full xl:w-[40%] h-[460px]'>
+                                                    <div>
+                                                        <img src={customer.image} className='w-full' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </SwiperSlide>
+                                    )
+                                })
+                            }
+                        </Swiper>
+                    </div>
+                </div>
             </div>
         </div>
     );

@@ -1,43 +1,55 @@
 [
   {
     "id": "1",
+    "image": "https://i.ibb.co/tHJGcMZ/c-1.png",
     "name": "John Doe",
     "date": "2024-07-01",
+    "type": "Regular Customer",
     "rating": 5,
     "comment": "The food was absolutely delicious, and the delivery was super quick! Highly recommend this restaurant for its amazing service and quality."
   },
   {
     "id": "2",
+    "image": "https://i.ibb.co/37Gk268/c-2.png",
     "name": "Jane Smith",
     "date": "2024-07-05",
+    "type": "VIP Customer",
     "rating": 4,
     "comment": "Great variety of dishes and very user-friendly website. The payment process was smooth and the food arrived hot and fresh. Will definitely order again!"
   },
   {
     "id": "3",
+    "image": "https://i.ibb.co/2MGzfh3/c-3.png",
     "name": "Michael Johnson",
     "date": "2024-07-06",
+    "type": "Customer",
     "rating": 5,
     "comment": "Fantastic experience! The website is easy to navigate, the food is top-notch, and the delivery is on time. Perfect for a hassle-free meal."
   },
   {
     "id": "4",
-    "    ame": "Emily Brown",
+    "image": "https://i.ibb.co/8mwTQ7s/c-4.png",
+    "name": "Emily Brown",
     "date": "2024-07-07",
+    "type": "VIP Customer",
     "rating": 5,
     "comment": "Absolutely loved the food! The website made ordering so easy, and the delivery was prompt. Can't wait to order again!"
   },
   {
     "id": "5",
-    "    ame": "David Wilson",
+    "image": "https://i.ibb.co/9tgQn66/c-5.png",
+    "name": "David Wilson",
     "date": "2024-07-08",
+    "type": "Customer",
     "rating": 4,
     "comment": "Good food and excellent service. The navigation on the website was straightforward, and the payment process was secure. Highly recommended!"
   },
   {
     "id": "6",
-    "    ame": "Sophia Martinez",
+    "image": "https://i.ibb.co/pffkpKn/c-6.png",
+    "name": "Sophia Martinez",
     "date": "2024-07-09",
+    "type": "Regular Customer",
     "rating": 5,
     "comment": "Amazing dining experience! The food arrived quickly and tasted fantastic. The website's user interface is very intuitive. Will definitely be a repeat customer."
   }

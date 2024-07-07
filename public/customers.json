@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "name": "John Doe",
+    "date": "2024-07-01",
+    "rating": 5,
+    "comment": "The food was absolutely delicious, and the delivery was super quick! Highly recommend this restaurant for its amazing service and quality."
+  },
+  {
+    "id": "2",
+    "name": "Jane Smith",
+    "date": "2024-07-05",
+    "rating": 4,
+    "comment": "Great variety of dishes and very user-friendly website. The payment process was smooth and the food arrived hot and fresh. Will definitely order again!"
+  },
+  {
+    "id": "3",
+    "name": "Michael Johnson",
+    "date": "2024-07-06",
+    "rating": 5,
+    "comment": "Fantastic experience! The website is easy to navigate, the food is top-notch, and the delivery is on time. Perfect for a hassle-free meal."
+  },
+  {
+    "id": "4",
+    "    ame": "Emily Brown",
+    "date": "2024-07-07",
+    "rating": 5,
+    "comment": "Absolutely loved the food! The website made ordering so easy, and the delivery was prompt. Can't wait to order again!"
+  },
+  {
+    "id": "5",
+    "    ame": "David Wilson",
+    "date": "2024-07-08",
+    "rating": 4,
+    "comment": "Good food and excellent service. The navigation on the website was straightforward, and the payment process was secure. Highly recommended!"
+  },
+  {
+    "id": "6",
+    "    ame": "Sophia Martinez",
+    "date": "2024-07-09",
+    "rating": 5,
+    "comment": "Amazing dining experience! The food arrived quickly and tasted fantastic. The website's user interface is very intuitive. Will definitely be a repeat customer."
+  }
+]

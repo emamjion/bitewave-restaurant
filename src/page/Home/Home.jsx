@@ -2,6 +2,7 @@ import AboutUs from "./AboutUs";
 import AppSection from "./AppSection";
 import Banner from "./Banner";
 import FeatureSection from "./FeatureSection";
+import HappyCustomers from "./HappyCustomers";
 import MeetOurTeam from "./MeetOurTeam";
 import SubscriptionSection from "./SubscriptionSection";
 
@@ -23,6 +24,9 @@ const Home = () => {
             
             {/* Meet our team section */}
             <MeetOurTeam/>
+
+            {/* Happy Customers section */}
+            <HappyCustomers/>
         </div>
     );
 };

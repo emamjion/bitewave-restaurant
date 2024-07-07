@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { FaQuoteLeft } from "react-icons/fa";
 import '../../styles/HappyCustomers.css';
 
+import WorkSliderBtns from '@/components/WorkSliderBtns';
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -37,7 +38,7 @@ const HappyCustomers = () => {
                                             key={customer.id}
                                         >
                                             <div className='flex flex-col xl:flex-row gap-[30px] xl:justify-between'>
-                                                <div className=' w-full xl:w-[60%] h-[460px] px-[50px] py-[50px]'>
+                                                <div className='border-l-2 border-l-accent w-full xl:w-[60%] h-[460px] px-[50px] py-[50px]'>
                                                     <div className=''>
                                                         <div>
                                                             <span> <FaQuoteLeft className='text-5xl text-accent' /> </span>
@@ -71,6 +72,13 @@ const HappyCustomers = () => {
                                     )
                                 })
                             }
+                            {/* swiper buttons */}
+                            <div>
+                                <WorkSliderBtns 
+                                    containerStyles='flex gap-2 absolute left-16 bottom-[calc(50%_22px)] xl:bottom-5 z-40 w-full justify-left'
+                                    btnStyles='bg-accent hover:bg-accent-hover text-white text-[16px] w-[30px] h-[30px] rounded-full flex items-center justify-center transition-all'
+                                />
+                            </div>
                         </Swiper>
                     </div>
                 </div>

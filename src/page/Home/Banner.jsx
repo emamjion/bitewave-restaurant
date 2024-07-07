@@ -30,7 +30,7 @@ const Banner = () => {
     // }
     
     return (
-        <section className="w-full banner-bg h-[760px]">
+        <section className="w-full banner-bg h-full xl:h-[760px]">
             <Swiper 
                 spaceBetween={30} 
                 slidesPerView={1} 
@@ -43,16 +43,16 @@ const Banner = () => {
                             <div className='h-full flex items-center justify-center relative'>
                                 <div className='flex flex-col xl:flex-row xl:gap-[30px] items-center '>
                                     {/* text */}
-                                    <div className='flex flex-col w-full xl:w-[50%] order-2 xl:order-none pl-4 xl:pl-10'>
+                                    <div className='flex flex-col w-full xl:w-[50%] order-2 xl:order-none'>
                                         <h4 className='text-[20px] font-semibold text-accent'>{item.subtitle}</h4>
                                         <h1 className='my-[23px] text-[26px] xl:text-[50px] font-semibold leading-tight capitalize'>{item.title}</h1>
-                                        <p className='xl:max-w-[460px] text-[#666666]'>{item.description}</p>
-                                        <div className='mt-10'>
+                                        <p className='md:max-w-[500px] xl:max-w-[460px] text-[#666666]'>{item.description}</p>
+                                        <div className='pb-6 md:pb-0 mt-10'>
                                             <Button>Order Now</Button>
                                         </div>
                                     </div>
                                     {/* image */}
-                                    <div className='w-full xl:w-[50%] order-1 xl:order-none'>
+                                    <div className='py-6 md:py-0 w-full xl:w-[50%] order-1 xl:order-none'>
                                         <img src={item.image} alt="" />
                                     </div>
                                 </div>
@@ -62,7 +62,7 @@ const Banner = () => {
                 }
                 {/* buttons */}
                 <WorkSliderBtns
-                    containerStyles='flex gap-2 absolute right-0 bottom-[calc(50%_22px)] xl:bottom-[50%] z-40 w-full justify-between'
+                    containerStyles='flex gap-2 absolute right-0 bottom-[calc(50%_22px)] xl:bottom-5 z-40 w-full justify-end'
                     btnStyles='bg-accent hover:bg-accent-hover text-white text-[16px] w-[30px] h-[30px] rounded-full flex items-center justify-center transition-all'
                 />
             </Swiper>

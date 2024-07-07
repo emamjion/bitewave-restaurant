@@ -2,6 +2,7 @@ import AboutUs from "./AboutUs";
 import AppSection from "./AppSection";
 import Banner from "./Banner";
 import FeatureSection from "./FeatureSection";
+import MeetOurTeam from "./MeetOurTeam";
 import SubscriptionSection from "./SubscriptionSection";
 
 const Home = () => {
@@ -19,6 +20,9 @@ const Home = () => {
 
             {/* App Section */}
             <AppSection/>
+            
+            {/* Meet our team section */}
+            <MeetOurTeam/>
         </div>
     );
 };

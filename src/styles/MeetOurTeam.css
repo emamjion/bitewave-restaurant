@@ -1,0 +1,11 @@
+.main-cont {
+  transition: 0.4s;
+  position: relative;
+}
+.img-cont {
+  transition: 0.4s;
+}
+
+.main-cont:hover .img-cont {
+  transform: scale(1.01);
+}

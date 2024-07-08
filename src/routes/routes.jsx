@@ -10,6 +10,7 @@ import Contact from "../page/Contact/Contact";
 import AdminDashboard from "../page/Dashboard/AdminDashboard";
 import Home from "../page/Home/Home";
 import Shop from "../page/Shop/Shop";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -54,7 +55,7 @@ const router = createBrowserRouter([
     // Admin Route and Layout
     {
         path: 'admin',
-        element: <AdminLayout/>,
+        element: <PrivateRoute> <AdminLayout/> </PrivateRoute>,
         children: [
             {
                 index: true,

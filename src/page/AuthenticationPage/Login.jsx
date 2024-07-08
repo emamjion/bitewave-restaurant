@@ -3,7 +3,7 @@ import { AuthContext } from '@/context/AuthProvider';
 import 'animate.css';
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import loginImg from '../../assets/images/login.png';
 import '../../styles/Login.css';
@@ -11,6 +11,9 @@ import '../../styles/Login.css';
 const Login = () => {
     const { loginUser } = useContext(AuthContext);
     const { register, reset, handleSubmit, formState: { errors } } = useForm();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
     const onSubmit = data => {
         
         loginUser(data.email, data.password)
@@ -34,6 +37,7 @@ const Login = () => {
               `
             }
         });
+        navigate(from, {replace: true} );
         reset();
     };
 

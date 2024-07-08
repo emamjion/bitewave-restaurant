@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const DesktopNav = () => {
@@ -8,6 +7,7 @@ const DesktopNav = () => {
         {name: 'Menu', path: '/menu'},
         {name: 'shop', path: '/shop'},
         {name: 'Blog', path: '/blog'},
+        {name: 'Dashboard', path: '/admin'},
         {name: 'Contact', path: '/contact'},
     ];
     const path = useLocation();

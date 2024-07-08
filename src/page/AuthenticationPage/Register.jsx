@@ -4,68 +4,60 @@ import { AuthContext } from '@/context/AuthProvider';
 import 'animate.css';
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import registerImg from '../../assets/images/register.png';
 import '../../styles/Login.css';
 import SocialAuth from './SocialAuth';
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUserProfile } = useContext(AuthContext);
+    const navigate = useNavigate();
     const { register, reset, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
+        
         createUser(data.email, data.password)
         .then(result => {
             const createdUser = result.user;
-
-            Swal.fire({
-                title: "User created Successfully!",
-                showClass: {
-                  popup: `
-                    animate__animated
-                    animate__fadeInUp
-                    animate__faster
-                  `
-                },
-                hideClass: {
-                  popup: `
-                    animate__animated
-                    animate__fadeOutDown
-                    animate__faster
-                  `
-                }
-            });
-
-            reset();
-            console.log('User Created');
+            console.log(createdUser);
+            updateUserProfile(data.name, data.photo)
+            .then(() => {
+                Swal.fire({
+                    title: "User created Successfully!",
+                    showClass: {
+                      popup: `
+                        animate__animated
+                        animate__fadeInUp
+                        animate__faster
+                      `
+                    },
+                    hideClass: {
+                      popup: `
+                        animate__animated
+                        animate__fadeOutDown
+                        animate__faster
+                      `
+                    }
+                });
+                navigate('/');
+                reset();
+            })
+            .catch(error => console.log(error))
         })
 
     };
     
-    
-    // const handleRegister = (e) => {
-    //     e.preventDefault();
-    //     const form = target.value;
-    //     const email = form.email.value;
-    //     const password = form.password.value;
-    //     const name = form.name.value;
-    //     const photo = form.photo.value;
-
-    //     createUser()
-    // }
-    
-    
     return (
         <section className="py-8 xl:py-[105px] login-bg">
             <div className="container mx-auto">
-                <div className='flex gap-7 flex-row-reverse items-center'>
+                <div className='flex gap-7 xl:flex-row-reverse items-center'>
                     {/* image */}
                     <div className='w-full xl:max-w-[50%] order-2 xl:order-none'>
                         <img src={registerImg} alt="" />
                     </div>
                     
                     {/* login part */}
-                    <div className='w-full xl:max-w-[50%] order-2 xl:order-none bg-white p-16 shadow-xl border border-[#e7e7e7] rounded'>
+                    <div className='w-full xl:max-w-[50%] order-1 xl:order-none bg-white p-16 shadow-xl border border-[#e7e7e7] rounded'>
                         <h1 className='text-center font-medium text-3xl'>Register</h1>
                         <form onSubmit={handleSubmit(onSubmit)} className='mt-6'>
                             <div className='text-center'>

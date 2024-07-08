@@ -1,3 +1,5 @@
+import Login from "@/page/AuthenticationPage/Login";
+import Register from "@/page/AuthenticationPage/Register";
 import MenuPage from "@/page/Menu/MenuPage";
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
@@ -37,7 +39,15 @@ const router = createBrowserRouter([
             {
                 path: 'contact',
                 element: <Contact/>
-            }
+            },
+            {
+                path: '/login',
+                element: <Login/>
+            },
+            {
+                path: '/register',
+                element: <Register/>
+            },
         ]
     },
 

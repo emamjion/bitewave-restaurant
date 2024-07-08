@@ -1,3 +1,4 @@
+import MenuPage from "@/page/Menu/MenuPage";
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import AdminLayout from "../layout/AdminLayout";
@@ -6,7 +7,6 @@ import Blog from "../page/Blog/Blog";
 import Contact from "../page/Contact/Contact";
 import AdminDashboard from "../page/Dashboard/AdminDashboard";
 import Home from "../page/Home/Home";
-import Menu from "../page/Menu/Menu";
 import Shop from "../page/Shop/Shop";
 
 const router = createBrowserRouter([
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'menu',
-                element: <Menu/>,
+                element: <MenuPage/>
             },
             {
                 path: 'shop',

@@ -28,7 +28,7 @@ const MeetOurTeam = () => {
                 <h4 className='text-[20px] font-semibold text-accent mb-1.5'>Our Team</h4>
                 <h1 className='text-[28px] lg:text-[36px] font-semibold text-[#292929]'>Meet Our Team</h1>
             </div>
-            <div className="flex items-center justify-center flex-col lg:flex-row flex-wrap gap-[30px] mt-5">
+            <div className="flex items-center justify-center flex-col xl:flex-row flex-wrap gap-[30px] mt-5">
                 {
                     members.map((member, index) => {
                         return (

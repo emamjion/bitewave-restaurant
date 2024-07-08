@@ -10,12 +10,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 const HappyCustomers = () => {
     const [customers, setCustomers] = useState([]);
-    console.log(customers);
     useEffect(() => {
         fetch('./customers.json').then(res => res.json()).then(data => setCustomers(data))
     }, [])
     return (
-        <div className="container mx-auto py-8 xl:py-[105px]">
+        <section className="container mx-auto py-8 xl:py-[105px]">
             <div className="flex items-center flex-col">
                 <h4 className='text-[20px] font-semibold text-accent mb-1.5'>Happy Customers</h4>
                 <h1 className='text-[28px] lg:text-[36px] font-semibold text-[#292929]'>Our Guestbook</h1>
@@ -89,7 +88,7 @@ const HappyCustomers = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

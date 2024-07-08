@@ -1,0 +1,10 @@
+.menu-bg {
+  background-image: url("../assets/images/bg.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.active {
+  border-bottom: 2px solid red;
+}

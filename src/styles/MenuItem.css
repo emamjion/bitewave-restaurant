@@ -1,0 +1,27 @@
+.product-card {
+  box-shadow: #f0f0f0 0 0 41px 1px;
+  background-color: #fff;
+  transition: 0.3s ease-in;
+}
+
+.icon-plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s ease-in;
+}
+
+.price {
+  background-color: #cc3333;
+  padding: 6px 20px;
+  border-radius: 6px;
+  color: white;
+  opacity: 0;
+  transition: 0.3s ease-in;
+}
+
+.product-card:hover .price,
+.product-card:hover .icon-plus {
+  opacity: 1;
+}

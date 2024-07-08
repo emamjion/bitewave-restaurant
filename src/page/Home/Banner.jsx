@@ -30,7 +30,7 @@ const Banner = () => {
     // }
     
     return (
-        <section className="w-full banner-bg h-full xl:h-[760px]">
+        <section className="w-full banner-bg h-full xl:h-[760px] px-4 lg:px-0">
             <Swiper 
                 spaceBetween={30} 
                 slidesPerView={1} 

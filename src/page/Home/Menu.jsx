@@ -41,7 +41,7 @@ const Menu = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/menu')
+        fetch('https://bitewave-restaurant-server.vercel.app/menu')
         .then(response => response.json())
         .then(data => {
             setMenuItem(data)

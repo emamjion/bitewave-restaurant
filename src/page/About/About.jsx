@@ -1,9 +1,18 @@
-import React from 'react';
+import AboutUs from '../Home/AboutUs';
+import HappyCustomers from '../Home/HappyCustomers';
+import MeetOurTeam from '../Home/MeetOurTeam';
 
 const About = () => {
     return (
         <div>
-            <h1>About Page</h1>
+            {/* About us section */}
+            <AboutUs/>
+            
+            {/* Meet our team section */}
+            <MeetOurTeam/>
+
+            {/* Happy customer section */}
+            <HappyCustomers/>
         </div>
     );
 };

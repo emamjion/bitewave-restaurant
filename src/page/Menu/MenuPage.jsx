@@ -17,7 +17,7 @@ const MenuPage = () => {
     
     
     return (
-        <section className="container mx-auto py-8 xl:py-[105px]">
+        <section className="container mx-auto py-8 pb-52">
             <div className='flex gap-[30px]'>
                 {/* menu content */}
                 <div className='flex-[5]'>

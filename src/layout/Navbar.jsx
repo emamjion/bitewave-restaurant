@@ -5,11 +5,13 @@ import { Link } from 'react-router-dom';
 // components
 import { Button } from "@/components/ui/button";
 import { AuthContext } from "@/context/AuthProvider";
+import useCart from "@/hooks/useCart";
 import { useContext } from "react";
 import DesktopNav from '../components/DesktopNav';
 import MobileNav from '../components/MobileNav';
 
 const Navbar = () => {
+    const [ cart ] = useCart();
     const { user, logOut } = useContext(AuthContext);
     const handleLogOut = () => {
         logOut()
@@ -39,7 +41,7 @@ const Navbar = () => {
                                         <span>
                                             <FaCartShopping className="text-xl"/>
                                         </span>
-                                        <span className="bg-accent text-xs px-2 py-1 rounded-[30px] text-white">99</span>
+                                        <span className="bg-accent text-xs px-2 py-1 rounded-[30px] text-white">{cart?.length}</span>
                                    </Link>
                                    <div className="mr-3 w-[48px] h-[48px] rounded-full border-2 border-accent cursor-pointer">
                                         <img src={user?.photoURL} className="max-w-full" title={user.displayName}  />

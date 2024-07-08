@@ -3,10 +3,20 @@ import { Link } from 'react-router-dom';
 
 // components
 import { Button } from "@/components/ui/button";
+import { AuthContext } from "@/context/AuthProvider";
+import { useContext } from "react";
 import DesktopNav from '../components/DesktopNav';
 import MobileNav from '../components/MobileNav';
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+    const handleLogOut = () => {
+        logOut()
+        .then(() => {
+
+        }).catch(error => console.log(error))
+    }
+    
     return (
         <header className='pt-8 xl:pt-12 '>
             <div className='container mx-auto flex justify-between items-center'>
@@ -20,12 +30,24 @@ const Navbar = () => {
                 {/* Desktop Nav and login button */}
                 <div className="hidden xl:flex items-center gap-8">
                     {/* <DesktopNav/> */}
-                    <div className='flex items-center gap-3'>
-                        <FaUserCircle className='text-3xl' />
-                        <Link to='/login'>
-                            <Button>Login</Button>
-                        </Link>
-                    </div>
+                    {
+                        user ? <>
+                            <div className='flex items-center gap-3'>
+                                <FaUserCircle className='text-3xl' />
+                                    <Link to='/'>
+                                        <Button onClick={handleLogOut} >Logout</Button>
+                                    </Link>
+                            </div>
+                        </> :
+                        <>
+                            <div className='flex items-center gap-3'>
+                                <FaUserCircle className='text-3xl' />
+                                <Link to='/login'>
+                                    <Button>Login</Button>
+                                </Link>
+                            </div>
+                        </>
+                    }
                 </div>
 
                 {/* Mobile nav */}

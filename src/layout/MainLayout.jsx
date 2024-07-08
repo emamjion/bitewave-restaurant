@@ -5,7 +5,6 @@ import Navbar from './Navbar';
 const MainLayout = () => {
     const location = useLocation();
     const noHeaderFooter = location.pathname.includes('/login') || location.pathname.includes('/register');
-    console.log(location.pathname);
     
     return (
         <div>

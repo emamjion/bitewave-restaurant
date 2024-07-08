@@ -38,10 +38,16 @@ const menus = [
 const Menu = () => {
     const [menuList, setMenuList] = useState('all');
     const [menuItem, setMenuItem] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('./menu.json').then(response => response.json()).then(data => setMenuItem(data))
-    }, [])
+        fetch('http://localhost:5000/menu')
+        .then(response => response.json())
+        .then(data => {
+            setMenuItem(data)
+            setLoading(false);
+        })
+    }, []);
     return (
         <section className='menu-bg'>
             <div className="container mx-auto py-8 xl:py-[105px] ">

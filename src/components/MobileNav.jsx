@@ -14,6 +14,7 @@ const MobileNav = () => {
         {name: 'Menu', path: '/menu'},
         {name: 'shop', path: '/shop'},
         {name: 'Blog', path: '/blog'},
+        {name: 'Dashboard', path: '/dashboard'},
         {name: 'Contact', path: '/contact'},
     ];
     const path = useLocation();

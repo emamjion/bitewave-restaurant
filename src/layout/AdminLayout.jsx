@@ -1,10 +1,10 @@
-import React from 'react';
+import Sidebar from "@/page/Dashboard/Sidebar";
 
 const AdminLayout = () => {
     return (
-        <div>
-            <h1>Admin Layout</h1>
-        </div>
+        <section>
+            <Sidebar/>
+        </section>
     );
 };
 

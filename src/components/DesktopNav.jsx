@@ -7,7 +7,7 @@ const DesktopNav = () => {
         {name: 'Menu', path: '/menu'},
         {name: 'shop', path: '/shop'},
         {name: 'Blog', path: '/blog'},
-        {name: 'Dashboard', path: '/admin'},
+        {name: 'Dashboard', path: '/dashboard'},
         {name: 'Contact', path: '/contact'},
     ];
     const path = useLocation();

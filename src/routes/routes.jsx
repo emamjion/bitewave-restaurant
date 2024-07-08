@@ -1,5 +1,6 @@
 import Login from "@/page/AuthenticationPage/Login";
 import Register from "@/page/AuthenticationPage/Register";
+import Cart from "@/page/Dashboard/Cart";
 import MenuPage from "@/page/Menu/MenuPage";
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
@@ -54,13 +55,25 @@ const router = createBrowserRouter([
 
     // Admin Route and Layout
     {
-        path: 'admin',
+        path: 'dashboard',
         element: <PrivateRoute> <AdminLayout/> </PrivateRoute>,
         children: [
             {
                 index: true,
-                element: <AdminDashboard/>
-            }
+                element: <AdminDashboard/>,
+            },
+            {
+                path: '/dashboard/cart',
+                element: <Cart/>,
+            },
+            {
+                index: true,
+                element: <AdminDashboard/>,
+            },
+            {
+                index: true,
+                element: <AdminDashboard/>,
+            },
         ]
     }
 ]);

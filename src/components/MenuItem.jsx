@@ -3,7 +3,7 @@ import useAxiosSecure from "@/hooks/useAxiosSecure";
 import useCart from "@/hooks/useCart";
 import { FaPlus } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import './../styles/MenuItem.css';
 
@@ -83,9 +83,11 @@ const MenuItem = ({ item }) => {
                         <span>Delivery Fee: </span> <span>$10</span>
                     </p>
                     <div className="flex items-center gap-1.5">
-                        <button className="icon-plus bg-accent h-[40px] w-[39px] rounded cursor-pointer">
-                            <FaPlus className="text-xl text-white" />
-                        </button>
+                        <Link to='/dashboard/cart'>
+                            <button className="icon-plus bg-accent h-[40px] w-[39px] rounded cursor-pointer">
+                                <FaPlus className="text-xl text-white" />
+                            </button>
+                        </Link>
                         <button
                             onClick={handleToCart}
                             className="bg-[#292929] h-[40px] w-[39px] flex items-center justify-center rounded cursor-pointer"

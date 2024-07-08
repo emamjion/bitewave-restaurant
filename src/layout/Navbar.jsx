@@ -37,7 +37,7 @@ const Navbar = () => {
                         user ? <>
                             <div className='flex items-center gap-3'>
                                 <div className=" flex items-center gap-4">
-                                   <Link to='/' className="flex items-center xl:mr-24">
+                                   <Link to='/dashboard/cart' className="flex items-center xl:mr-24">
                                         <span>
                                             <FaCartShopping className="text-xl"/>
                                         </span>

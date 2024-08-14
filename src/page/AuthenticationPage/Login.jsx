@@ -7,6 +7,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import loginImg from '../../assets/images/login.png';
 import '../../styles/Login.css';
+import SocialAuth from './SocialAuth';
 
 const Login = () => {
     const { loginUser } = useContext(AuthContext);
@@ -97,6 +98,8 @@ const Login = () => {
                         <div className='mt-4 flex items-center justify-center gap-1'>
                             <p className='text-sm text-[#757575]'>Not Registered?</p><Link to='/register' className='text-sm text-accent font-semibold'>Register</Link>
                         </div>
+                        <hr className='my-3' />
+                        <SocialAuth/>
                     </div>
                 </div>
             </div>

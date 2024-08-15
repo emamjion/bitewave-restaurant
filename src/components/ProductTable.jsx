@@ -27,7 +27,7 @@ const ProductTable = ({cart, refetch}) => {
                 }
             })
             }
-          });
+        });
     }
     
     return (

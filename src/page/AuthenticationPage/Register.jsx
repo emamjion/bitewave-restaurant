@@ -18,7 +18,7 @@ const Register = () => {
     const navigate = useNavigate();
     const { register, reset, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-        
+        console.log('clicked');
         createUser(data.email, data.password)
         .then(result => {
             const createdUser = result.user;

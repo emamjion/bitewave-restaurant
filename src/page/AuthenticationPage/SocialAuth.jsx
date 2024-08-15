@@ -2,11 +2,14 @@ import useAuth from '@/hooks/useAuth';
 import useAxiosPublic from '@/hooks/useAxiosPublic';
 import { FaFacebookF, FaGithub, FaGoogle } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const SocialAuth = () => {
     const {googleSignIn} = useAuth();
     const axiosPublic = useAxiosPublic();
     const navigate = useNavigate();
+    
+    // Google Authentication
     const handleGoogleSignIn = () => {
         googleSignIn()
         .then(result => {
@@ -22,6 +25,17 @@ const SocialAuth = () => {
                 navigate('/');
             })
         })
+    };
+
+    // TODO: GitHub Authentication
+
+    const handleGitHubLogin = () => {
+        Swal.fire("Developer is working!");
+    }
+
+    // TODO: Facebook Authentication
+    const handleFacebookLogin = () => {
+        Swal.fire("Developer is working!");
     }
     
     return (
@@ -29,12 +43,12 @@ const SocialAuth = () => {
             <button onClick={handleGoogleSignIn} className='w-[44px] h-[44px] border border-accent flex items-center justify-center rounded cursor-pointer'>
                 <FaGoogle className='text-accent text-xl' />
             </button>
-            <div className='w-[44px] h-[44px] border border-accent flex items-center justify-center rounded cursor-pointer'>
+            <button onClick={handleGitHubLogin} className='w-[44px] h-[44px] border border-accent flex items-center justify-center rounded cursor-pointer'>
                 <FaGithub className='text-accent text-xl'/>
-            </div>
-            <div className='w-[44px] h-[44px] border border-accent flex items-center justify-center rounded cursor-pointer'>
+            </button>
+            <button onClick={handleFacebookLogin} className='w-[44px] h-[44px] border border-accent flex items-center justify-center rounded cursor-pointer'>
                 <FaFacebookF className='text-accent text-xl'/>
-            </div>
+            </button>
         </div>
     );
 };

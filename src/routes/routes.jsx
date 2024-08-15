@@ -2,6 +2,7 @@ import Login from "@/page/AuthenticationPage/Login";
 import Register from "@/page/AuthenticationPage/Register";
 import AllUsers from "@/page/Dashboard/Admin/AllUsers";
 import Cart from "@/page/Dashboard/Cart";
+import UserDashboard from "@/page/Dashboard/User/UserDashboard";
 import MenuPage from "@/page/Menu/MenuPage";
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
@@ -9,7 +10,6 @@ import AdminLayout from "../layout/AdminLayout";
 import About from "../page/About/About";
 import Blog from "../page/Blog/Blog";
 import Contact from "../page/Contact/Contact";
-import AdminDashboard from "../page/Dashboard/AdminDashboard";
 import Home from "../page/Home/Home";
 import Shop from "../page/Shop/Shop";
 import PrivateRoute from "./PrivateRoute";
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <AdminDashboard/>,
+                element: <UserDashboard/>,
             },
             {
                 path: '/dashboard/cart',

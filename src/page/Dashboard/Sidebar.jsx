@@ -1,3 +1,4 @@
+import useAdmin from '@/hooks/useAdmin';
 import React, { useState } from 'react';
 import { AiOutlineHeart, AiOutlineUser } from "react-icons/ai";
 import { FaHome, FaList, FaUtensils } from 'react-icons/fa';
@@ -11,7 +12,7 @@ import { Link, Outlet } from 'react-router-dom';
 const Sidebar = () => {
     
     // TODO: Get isAdmin value from the database
-    const isAdmin = true;
+    const [isAdmin] = useAdmin();
     
     const menus = [
         {

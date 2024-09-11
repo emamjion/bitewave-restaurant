@@ -2,11 +2,11 @@ import useAdmin from '@/hooks/useAdmin';
 import React, { useState } from 'react';
 import { AiOutlineHeart, AiOutlineUser } from "react-icons/ai";
 import { FaHome, FaList, FaUtensils } from 'react-icons/fa';
-import { FiFolder, FiMessageSquare, FiShoppingCart } from "react-icons/fi";
+import { FiShoppingCart } from "react-icons/fi";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { MdOutlineDashboard, MdRateReview, MdRestaurantMenu } from "react-icons/md";
-import { RiSettings4Line } from "react-icons/ri";
-import { TbReportAnalytics } from "react-icons/tb";
+// import { RiSettings4Line } from "react-icons/ri";
+// import { TbReportAnalytics } from "react-icons/tb";
 import { Link, Outlet } from 'react-router-dom';
 
 const Sidebar = () => {
@@ -25,22 +25,22 @@ const Sidebar = () => {
             link: '/user',
             icon: AiOutlineUser
         },
-        {
-            name: 'message',
-            link: '/message',
-            icon: FiMessageSquare
-        },
-        {
-            name: 'analytics',
-            link: '/analytics',
-            icon: TbReportAnalytics,
-            margin: true
-        },
-        {
-            name: 'add Review',
-            link: '/dashboard/add-review',
-            icon: FiFolder
-        },
+        // {
+        //     name: 'message',
+        //     link: '/message',
+        //     icon: FiMessageSquare
+        // },
+        // {
+        //     name: 'analytics',
+        //     link: '/analytics',
+        //     icon: TbReportAnalytics,
+        //     margin: true
+        // },
+        // {
+        //     name: 'add Review',
+        //     link: '/dashboard/add-review',
+        //     icon: FiFolder
+        // },
         {
             name: 'my cart',
             link: '/dashboard/cart',
@@ -56,12 +56,12 @@ const Sidebar = () => {
             link: '/dashboard/payment-history',
             icon: AiOutlineHeart
         },
-        {
-            name: 'setting',
-            link: '/setting',
-            icon: RiSettings4Line,
-            margin: true
-        },
+        // {
+        //     name: 'setting',
+        //     link: '/setting',
+        //     icon: RiSettings4Line,
+        //     margin: true
+        // },
         {
             name: 'Home',
             link: '/',
@@ -91,15 +91,15 @@ const Sidebar = () => {
             link: '/message',
             icon:  MdRateReview
         },
-        {
-            name: 'analytics',
-            link: '/analytics',
-            icon: TbReportAnalytics,
-            margin: true
-        },
+        // {
+        //     name: 'analytics',
+        //     link: '/analytics',
+        //     icon: TbReportAnalytics,
+        //     margin: true
+        // },
         {
             name: 'add items',
-            link: '/dashboard/add-review',
+            link: '/dashboard/add-item',
             icon: FaUtensils
         },
         {
@@ -117,12 +117,12 @@ const Sidebar = () => {
             link: '/dashboard/payment-history',
             icon: AiOutlineHeart
         },
-        {
-            name: 'setting',
-            link: '/setting',
-            icon: RiSettings4Line,
-            margin: true
-        },
+        // {
+        //     name: 'setting',
+        //     link: '/setting',
+        //     icon: RiSettings4Line,
+        //     margin: true
+        // },
         {
             name: 'Home',
             link: '/',

@@ -1,5 +1,6 @@
 import Login from "@/page/AuthenticationPage/Login";
 import Register from "@/page/AuthenticationPage/Register";
+import AddItem from "@/page/Dashboard/Admin/AddItem";
 import AllUsers from "@/page/Dashboard/Admin/AllUsers";
 import Cart from "@/page/Dashboard/Cart";
 import UserDashboard from "@/page/Dashboard/User/UserDashboard";
@@ -12,6 +13,7 @@ import Blog from "../page/Blog/Blog";
 import Contact from "../page/Contact/Contact";
 import Home from "../page/Home/Home";
 import Shop from "../page/Shop/Shop";
+import AdminRoute from "./AdminRoute";
 import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
@@ -72,8 +74,12 @@ const router = createBrowserRouter([
             // Admin routes
             {
                 path: '/dashboard/all-users',
-                element: <AllUsers/>
-            }
+                element: <AdminRoute> <AllUsers/> </AdminRoute>
+            },
+            {
+                path: '/dashboard/add-item',
+                element: <AdminRoute> <AddItem/> </AdminRoute>
+            },
         ]
     }
 ]);

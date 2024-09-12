@@ -1,13 +1,25 @@
+import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Blog = () => {
     const [blogs, setBlogs] = useState([]);
+    const [visible, setVisible] = useState(3);
+
     useEffect(() => {
         fetch('./blogs.json')
         .then(res => res.json())
         .then(data => setBlogs(data))
-    }, [])
+    }, []);
+
+    const handleShowMoreButton = () => {
+        setVisible(prev => prev + 3);
+    }
+
+    const handleShowLessButton = () => {
+        setVisible(3);
+    }
+    
     return (
         <section className="container mx-auto py-8 xl:py-[105px]">
             <div className="flex items-center flex-col mb-4">
@@ -16,7 +28,7 @@ const Blog = () => {
             </div>
             <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
-                    blogs.map((blog) => {
+                    blogs.slice(0,visible).map((blog) => {
                         return (
                             <div key={blog.id} className="max-w-[440px] h-[560px]">
                                 <div>
@@ -35,11 +47,22 @@ const Blog = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                
+                                </div>    
                             </div>
                         )
                     })
+                }
+            </div>
+            {/* Show more button */}
+            <div className="mt-6 flex items-center justify-center">
+                {
+                    visible < blogs.length ? (
+                        <Button onClick={handleShowMoreButton}>Show More</Button>
+                    )
+                    :
+                    (
+                        <Button onClick={handleShowLessButton}>Show Less</Button>
+                    )
                 }
             </div>
         </section>

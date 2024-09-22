@@ -104,9 +104,14 @@ const Sidebar = () => {
         },
         {
             name: 'manage items',
-            link: '/dashboard/cart',
+            link: '/dashboard/manage-item',
             icon: MdRestaurantMenu
         },
+        // {
+        //     name: 'manage items',
+        //     link: '/dashboard/cart',
+        //     icon: MdRestaurantMenu
+        // },
         {
             name: 'manage bookings',
             link: '/dashboard/booking',

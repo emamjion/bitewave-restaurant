@@ -3,6 +3,7 @@ import Register from "@/page/AuthenticationPage/Register";
 import BlogDetailsPage from "@/page/Blog/BlogDetailsPage";
 import AddItem from "@/page/Dashboard/Admin/AddItem";
 import AllUsers from "@/page/Dashboard/Admin/AllUsers";
+import ManageItems from "@/page/Dashboard/Admin/ManageItems";
 import Cart from "@/page/Dashboard/Cart";
 import UserDashboard from "@/page/Dashboard/User/UserDashboard";
 import MenuPage from "@/page/Menu/MenuPage";
@@ -45,7 +46,8 @@ const router = createBrowserRouter([
             {
                 path: 'blogs/:id',
                 element: <BlogDetailsPage/>,
-                loader: ({params}) => fetch(`http://localhost:5000/blogs/${params?.id}`)
+                // When i'm not use useParams hook, then i will use loader.
+                // loader: ({params}) => fetch(`http://localhost:5000/blogs/${params?.id}`)
             },
             {
                 path: 'contact',
@@ -85,6 +87,10 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/add-item',
                 element: <AdminRoute> <AddItem/> </AdminRoute>
+            },
+            {
+                path: '/dashboard/manage-item',
+                element: <AdminRoute> <ManageItems/> </AdminRoute>
             },
         ]
     }

@@ -6,7 +6,7 @@ const DesktopNav = () => {
         {name: 'About', path: '/about'},
         {name: 'Menu', path: '/menu'},
         {name: 'shop', path: '/shop'},
-        {name: 'Blog', path: '/blog'},
+        {name: 'Blogs', path: '/blogs'},
         {name: 'Dashboard', path: '/dashboard'},
         {name: 'Contact', path: '/contact'},
     ];

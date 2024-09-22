@@ -1,5 +1,6 @@
 import Login from "@/page/AuthenticationPage/Login";
 import Register from "@/page/AuthenticationPage/Register";
+import BlogDetailsPage from "@/page/Blog/BlogDetailsPage";
 import AddItem from "@/page/Dashboard/Admin/AddItem";
 import AllUsers from "@/page/Dashboard/Admin/AllUsers";
 import Cart from "@/page/Dashboard/Cart";
@@ -38,8 +39,13 @@ const router = createBrowserRouter([
                 element: <Shop/>
             },
             {
-                path: 'blog',
+                path: 'blogs',
                 element: <Blog/>
+            },
+            {
+                path: 'blogs/:id',
+                element: <BlogDetailsPage/>,
+                loader: ({params}) => fetch(`http://localhost:5000/blogs/${params?.id}`)
             },
             {
                 path: 'contact',

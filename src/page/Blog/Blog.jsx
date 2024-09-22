@@ -7,7 +7,7 @@ const Blog = () => {
     const [visible, setVisible] = useState(3);
 
     useEffect(() => {
-        fetch('./blogs.json')
+        fetch('http://localhost:5000/blogs')
         .then(res => res.json())
         .then(data => setBlogs(data))
     }, []);
@@ -30,7 +30,7 @@ const Blog = () => {
                 {
                     blogs.slice(0,visible).map((blog) => {
                         return (
-                            <div key={blog.id} className="max-w-[440px] h-[560px]">
+                            <div key={blog._id} className="max-w-[440px] h-[560px]">
                                 <div>
                                     <img src={blog.image} alt={blog.title} className="w-full" />
                                     <div className="px-6 py-5 bg-white shadow-lg">
@@ -43,7 +43,7 @@ const Blog = () => {
                                                 <span> - Comments</span>
                                             </div>
                                             <div>
-                                                <Link to={`/blog/${blog.id}`} className="border-b-2 text-sm border-[#7a7a7a] text-[#666]"> Read More</Link>
+                                                <Link to={`/blogs/${blog._id}`} className="hover:border-accent hover:text-accent duration-300 border-b-2 text-sm border-[#7a7a7a] text-[#666]"> Read More</Link>
                                             </div>
                                         </div>
                                     </div>

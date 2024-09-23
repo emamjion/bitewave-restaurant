@@ -12,7 +12,7 @@ const MenuDetailsPage = () => {
     const [menu, setMenu] = useState([]);
     const params = useParams();
     useEffect(() => {
-        fetch(`http://localhost:5000/menu/${params.id}`).then(res => res.json()).then(data => setMenu(data))
+        fetch(`https://bitewave-restaurant-server.vercel.app/menu/${params.id}`).then(res => res.json()).then(data => setMenu(data))
     }, []);
 
     const {user} = useAuth();

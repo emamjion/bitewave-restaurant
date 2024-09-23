@@ -52,7 +52,7 @@ const router = createBrowserRouter([
                 path: 'blogs/:id',
                 element: <BlogDetailsPage/>,
                 // When i'm not use useParams hook, then i will use loader.
-                // loader: ({params}) => fetch(`http://localhost:5000/blogs/${params?.id}`)
+                // loader: ({params}) => fetch(`https://bitewave-restaurant-server.vercel.app/blogs/${params?.id}`)
             },
             {
                 path: 'contact',

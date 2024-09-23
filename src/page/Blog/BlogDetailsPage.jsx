@@ -8,7 +8,7 @@ const BlogDetailsPage = () => {
     const {id} = useParams();
     const [blogsData, setBlogsData] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/blogs/${id}`)
+        fetch(`https://bitewave-restaurant-server.vercel.app/blogs/${id}`)
         .then(res => res.json())
         .then(data => setBlogsData(data))
     }, []);

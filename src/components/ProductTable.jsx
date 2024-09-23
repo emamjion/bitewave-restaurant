@@ -1,10 +1,11 @@
 import useAxiosSecure from "@/hooks/useAxiosSecure";
 import { FaTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
-const ProductTable = ({cart, refetch}) => {
-    const handleDelete = (id) => {
-        const axiosSecure = useAxiosSecure();
 
+
+const ProductTable = ({cart, refetch}) => {
+    const axiosSecure = useAxiosSecure();
+    const handleDelete = (id) => {
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",

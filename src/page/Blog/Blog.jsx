@@ -7,7 +7,7 @@ const Blog = () => {
     const [visible, setVisible] = useState(3);
 
     useEffect(() => {
-        fetch('http://localhost:5000/blogs')
+        fetch('https://bitewave-restaurant-server.vercel.app/blogs')
         .then(res => res.json())
         .then(data => setBlogs(data))
     }, []);

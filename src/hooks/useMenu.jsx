@@ -12,7 +12,7 @@ const useMenu = () => {
     /*
     // Basic fetching data using axios
     useEffect(() => {
-        axios.get('http://localhost:5000/menu')
+        axios.get('https://bitewave-restaurant-server.vercel.app/menu')
         .then(response => {
             setMenu(response.data);
             setLoading(false)

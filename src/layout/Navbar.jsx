@@ -4,15 +4,17 @@ import { Link } from 'react-router-dom';
 
 // components
 import { Button } from "@/components/ui/button";
-import { AuthContext } from "@/context/AuthProvider";
+// import { AuthContext } from "@/context/AuthProvider";
 import useCart from "@/hooks/useCart";
-import { useContext } from "react";
+// import { useContext } from "react";
+import useAuth from "@/hooks/useAuth";
 import DesktopNav from '../components/DesktopNav';
 import MobileNav from '../components/MobileNav';
 
 const Navbar = () => {
     const [ cart ] = useCart();
-    const { user, logOut } = useContext(AuthContext);
+    // const { user, logOut } = useContext(AuthContext);
+    const { user, logOut } = useAuth();
     const handleLogOut = () => {
         logOut()
         .then(() => {

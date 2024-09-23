@@ -13,12 +13,12 @@ const MenuItem = ({ item }) => {
     const location = useLocation();
     const axiosSecure = useAxiosSecure();
     const [ , refetch ] =  useCart();
-    const { id, image, category, price, recipe, name } = item;
+    const { _id,  image, category, price, recipe, name } = item;
     const handleToCart = () => {
         if(user && user.email)
         {
             const cartItem = {
-                menuId : id,
+                menuId : _id,
                 email: user.email,
                 name,
                 image,
@@ -58,19 +58,13 @@ const MenuItem = ({ item }) => {
                 }
               });
         }
-        
-        // fetch('https://bitewave-restaurant-server.vercel.app/cart', {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type' : 'application/json'
-        //     },
-        //     body: JSON.stringify(food)
-        // })
     }
     return (
         <div className="product-card">
             <div className="relative">
-                <img src={image} alt="" />
+                <Link to={`/menu/${_id}`}>
+                    <img src={image} alt="" />
+                </Link>
                 <div className="absolute top-2 left-2">
                     <p className="price">${price}</p>
                 </div>

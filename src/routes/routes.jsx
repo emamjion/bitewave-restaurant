@@ -6,6 +6,7 @@ import AllUsers from "@/page/Dashboard/Admin/AllUsers";
 import ManageItems from "@/page/Dashboard/Admin/ManageItems";
 import Cart from "@/page/Dashboard/Cart";
 import UserDashboard from "@/page/Dashboard/User/UserDashboard";
+import MenuDetailsPage from "@/page/Menu/MenuDetailsPage";
 import MenuPage from "@/page/Menu/MenuPage";
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
             {
                 path: 'menu',
                 element: <MenuPage/>
+            },
+            {
+                path: 'menu/:id',
+                element: <MenuDetailsPage/>
             },
             {
                 path: 'shop',

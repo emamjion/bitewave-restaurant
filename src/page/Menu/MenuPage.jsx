@@ -25,7 +25,7 @@ const MenuPage = () => {
                         {
                             menuItem.filter((item) => menuList === 'all' ? 'true' : item.category === menuList).map((item => {
                                 return <MenuItem
-                                    key={item.id}
+                                    key={item._id}
                                     item={item}
                                 />
                             }))

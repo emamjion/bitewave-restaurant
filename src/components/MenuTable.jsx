@@ -1,5 +1,6 @@
 import useAxiosSecure from "@/hooks/useAxiosSecure";
 import { FaRegEdit, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const MenuTable = ({menu, refetch}) => {
@@ -65,12 +66,15 @@ const MenuTable = ({menu, refetch}) => {
                     <td className="px-6 py-4">
                         <div className="flex justify-center items-center gap-2">
                         {/* edit button */}
-                        <button
-                            onClick={() => handleEditItem(item)}
-                            className="bg-accent hover:bg-[#1c1c22] text-white w-10 h-10 flex items-center justify-center rounded transition-all duration-200"
-                        >
-                            <FaRegEdit className="text-lg" />
-                        </button>
+                        {/* TODO: When click the edit button, then modal will be show. */}
+                        <Link to={`/dashboard/manage-item/${item._id}`}>
+                            <button
+                                onClick={() => handleEditItem(item)}
+                                className="bg-accent hover:bg-[#1c1c22] text-white w-10 h-10 flex items-center justify-center rounded transition-all duration-200"
+                            >
+                                <FaRegEdit className="text-lg" />
+                            </button>
+                        </Link>
                         
                         {/* delete button */}
                         <button

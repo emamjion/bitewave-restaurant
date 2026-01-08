@@ -171,7 +171,7 @@ const Footer = () => {
       </div>
       {/* copyright section */}
       <div className="border-b border-[#444]"></div>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between container mx-auto">
         <p className="py-5 text-center text-white">
           &copy; Copyright bitewave. 2026 All Right Reserved.
         </p>

@@ -2,30 +2,30 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{js,jsx}',
-    './components/**/*.{js,jsx}',
-    './app/**/*.{js,jsx}',
-    './src/**/*.{js,jsx}',
+    "./pages/**/*.{js,jsx}",
+    "./components/**/*.{js,jsx}",
+    "./app/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx}",
   ],
   prefix: "",
   theme: {
     container: {
       center: true,
-      padding: "15px",
+      padding: "16px",
     },
     screens: {
-        sm: '640px',
-        md: '768px',
-        lg: '992px',
-        xl: '1440px',
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1440px",
     },
     extend: {
       colors: {
-        primary: '',
+        primary: "",
         accent: {
-          DEFAULT: '#cc3333',
-          hover: '#1c1c22'
-        }
+          DEFAULT: "#cc3333",
+          hover: "#1c1c22",
+        },
       },
       keyframes: {
         "accordion-down": {
@@ -44,4 +44,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
